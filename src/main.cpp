@@ -32,6 +32,12 @@ void tratarJsonComando(const String &mensagem);
 void PowerTV();
 void VolumeMais();
 void VolumeMenos();
+void ShareTela();
+void SetaDireita();
+void SetaEsquerda();
+void SetaCima();
+void SetaBaixo();
+void OK();
 
 
 void setup()
@@ -55,13 +61,14 @@ void loop()
     loopMQTT();
 }   
 
-// TODO - Adicionar DebugInfo e DebugErro para monitorar o status do dispositivo e mensagens de erro.
-// TODO - Criar função para tratar o JSON recebido via MQTT e executar as ações correspondentes (Ligar/Desligar TV, Aumentar/Diminuir Volume).
 
 
 
 
 
+//---------------------------------------------
+//---------COMANDOS DE TELA-------------------
+//---------------------------------------------
 void PowerTV()
 {
   irsend.sendLG(codigoPower, 32);
@@ -87,6 +94,9 @@ void ShareTela()
 
 }
 
+//---------------------------------------------
+//---------DIRECIONAIS E OK--------------------
+//---------------------------------------------
 void SetaDireita()
 {
   irsend.sendLG(codigoSetaDireita, 32);
