@@ -1,5 +1,4 @@
-/*
-TESTE GITHUB:
+/* 
 ========================================
 CONTROLE IR TV LG COM ESP32-S3
 ========================================
@@ -24,7 +23,7 @@ P -> POWER
 #include <IRsend.h>
 
 // ======================================
-// PINO DO LED INFRAVERMELHO
+//PINO DO LED INFRAVERMELHO
 // ======================================
 
 const uint16_t pinIR = 4;
